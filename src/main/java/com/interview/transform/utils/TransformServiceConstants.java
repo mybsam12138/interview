@@ -1,4 +1,4 @@
-package com.interview.transform;
+package com.interview.transform.utils;
 
 public class TransformServiceConstants {
     public static final int CONSECUTIVE_NUM = 3;

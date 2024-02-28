@@ -1,4 +1,7 @@
-package com.interview.transform;
+package com.interview.transform.transformer;
+
+import com.interview.transform.transformer.impl.RemoveConsecutiveTransformer;
+import com.interview.transform.transformer.impl.ReplaceWithPrevCharTransformer;
 
 import java.util.Map;
 

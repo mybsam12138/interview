@@ -1,4 +1,4 @@
-package com.interview.transform;
+package com.interview.transform.transformer;
 
 public enum TransformerType {
     REMOVE_CONSECUTIVE("RemoveConsecutive"),

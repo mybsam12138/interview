@@ -1,4 +1,8 @@
-package com.interview.transform;
+package com.interview.transform.service;
+
+import com.interview.transform.exception.TransformationException;
+import com.interview.transform.transformer.Transformer;
+import com.interview.transform.transformer.TransformerFactory;
 
 public class TransformService {
     public String transform(String transformType, String input) throws TransformationException {

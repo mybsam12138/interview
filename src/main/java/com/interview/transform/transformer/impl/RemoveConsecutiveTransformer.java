@@ -1,6 +1,9 @@
-package com.interview.transform;
+package com.interview.transform.transformer.impl;
 
-public class ReplaceWithPrevCharTransformer implements Transformer {
+import com.interview.transform.utils.TransformServiceConstants;
+import com.interview.transform.transformer.Transformer;
+
+public class RemoveConsecutiveTransformer implements Transformer {
     @Override
     public String transform(String input) {
         StringBuilder sb = new StringBuilder(input);
@@ -14,14 +17,7 @@ public class ReplaceWithPrevCharTransformer implements Transformer {
                     j++;
                 }
                 if (j - i >= TransformServiceConstants.CONSECUTIVE_NUM) {
-                    if (i > 0) {
-                        // If the sequence is not at the start, replace it with the character before the sequence
-                        char replaceChar = sb.charAt(i - 1);
-                        sb.replace(i, j, String.valueOf(replaceChar));
-                    } else {
-                        sb.delete(i, j);
-                    }
-
+                    sb.delete(i, j);
                     found = true;
                     break; // Restart checking after modification
                 }
